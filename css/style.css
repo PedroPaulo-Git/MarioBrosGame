@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    overflow: hidden;
+    height: 100%;
+}
+
+.game-board{
+    width: 100%;
+    height: 555px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb,#e0f6ff);
+}
+.canon{
+    position: absolute;
+    width:80px;
+    bottom: 0;
+    animation: canon-animation 2s infinite linear;
+}
+.floor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200%;
+    height: 100px;
+    animation: floor-animation 2s infinite linear;
+ 
+}
+
+button.reiniciar{
+    width: 30%;
+    padding-block:2%;
+    border: none;
+    background-color: #00af14;
+    color: #FFFF;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px rgb(97, 97, 97);
+}
+.gameover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes canon-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+.cloud{
+    position: absolute;
+    width: 400px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    bottom: 0;
+    position: absolute;
+    
+}
+ /**/ 
+ .jump{
+  animation: jump 500ms ease-out;
+} 
+
+@keyframes cloud-animation{
+    from{
+        right: -340px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+@keyframes floor-animation {
+    from {
+        right:-10%;
+        left: 0%;
+    }
+    to {
+        right: 10%;
+        left: -100%;
+    }
+}
+@keyframes canon-animation{
+    from{
+        right: -340px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+@keyframes jump {
+   0%{
+    bottom: 0;
+   }
+    40%{
+        bottom: 180px;
+    }
+   
+   50%{
+    bottom: 180px;
+
+   }
+   60%{
+    bottom: 180px;
+   }
+   100%{
+    bottom: 0;
+   }
+}
